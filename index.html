@@ -963,7 +963,7 @@
         async function updateStatus() {
             try {
                 const res = await fetchWithAuth(API + "/status", {
-                    signal: AbortSignal.timeout(5000)
+                    signal: AbortSignal.timeout(10000)
                 });
 
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
